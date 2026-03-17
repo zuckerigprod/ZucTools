@@ -1,0 +1,16 @@
+{
+  "name": "ZucTools — Онлайн-инструменты",
+  "short_name": "ZucTools",
+  "description": "Бесплатные онлайн-калькуляторы и утилиты: проценты, НДС, налоги и многое другое",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#110b1d",
+  "theme_color": "#a855f7",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

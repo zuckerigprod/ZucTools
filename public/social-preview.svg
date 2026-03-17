@@ -1,0 +1,95 @@
+<svg width="1280" height="640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa" />
+      <stop offset="50%" style="stop-color:#f472b6" />
+      <stop offset="100%" style="stop-color:#60a5fa" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:0.08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)" />
+
+  <!-- Glow circles -->
+  <circle cx="200" cy="320" r="300" fill="url(#glow)" />
+  <circle cx="1080" cy="320" r="300" fill="url(#glow)" />
+
+  <!-- Grid pattern -->
+  <g opacity="0.04" stroke="#fff" stroke-width="1">
+    <line x1="0" y1="80" x2="1280" y2="80" />
+    <line x1="0" y1="160" x2="1280" y2="160" />
+    <line x1="0" y1="240" x2="1280" y2="240" />
+    <line x1="0" y1="320" x2="1280" y2="320" />
+    <line x1="0" y1="400" x2="1280" y2="400" />
+    <line x1="0" y1="480" x2="1280" y2="480" />
+    <line x1="0" y1="560" x2="1280" y2="560" />
+    <line x1="160" y1="0" x2="160" y2="640" />
+    <line x1="320" y1="0" x2="320" y2="640" />
+    <line x1="480" y1="0" x2="480" y2="640" />
+    <line x1="640" y1="0" x2="640" y2="640" />
+    <line x1="800" y1="0" x2="800" y2="640" />
+    <line x1="960" y1="0" x2="960" y2="640" />
+    <line x1="1120" y1="0" x2="1120" y2="640" />
+  </g>
+
+  <!-- Calculator icon (centered) -->
+  <g transform="translate(612, 130)" fill="none" stroke="url(#title)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="56" height="64" rx="8" />
+    <rect x="8" y="8" width="40" height="16" rx="2" fill="url(#title)" opacity="0.2" />
+    <circle cx="16" cy="36" r="3" fill="url(#title)" />
+    <circle cx="28" cy="36" r="3" fill="url(#title)" />
+    <circle cx="40" cy="36" r="3" fill="url(#title)" />
+    <circle cx="16" cy="50" r="3" fill="url(#title)" />
+    <circle cx="28" cy="50" r="3" fill="url(#title)" />
+    <circle cx="40" cy="50" r="3" fill="url(#title)" />
+  </g>
+
+  <!-- Title -->
+  <text x="640" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="80" font-weight="800" fill="url(#title)">ZucTools</text>
+
+  <!-- Subtitle -->
+  <text x="640" y="335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#94a3b8">
+    Бесплатные онлайн-калькуляторы и инструменты
+  </text>
+
+  <!-- Tags -->
+  <g transform="translate(640, 400)" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16">
+    <!-- React -->
+    <rect x="-310" y="-14" width="90" height="28" rx="14" fill="#61dafb" opacity="0.15" />
+    <text x="-265" y="5" fill="#61dafb">React 19</text>
+    <!-- TypeScript -->
+    <rect x="-195" y="-14" width="120" height="28" rx="14" fill="#3178c6" opacity="0.15" />
+    <text x="-135" y="5" fill="#3178c6">TypeScript</text>
+    <!-- Vite -->
+    <rect x="-50" y="-14" width="70" height="28" rx="14" fill="#ffd62e" opacity="0.15" />
+    <text x="-15" y="5" fill="#ffd62e">Vite</text>
+    <!-- Tailwind -->
+    <rect x="45" y="-14" width="110" height="28" rx="14" fill="#06b6d4" opacity="0.15" />
+    <text x="100" y="5" fill="#06b6d4">Tailwind 4</text>
+    <!-- Radix -->
+    <rect x="180" y="-14" width="100" height="28" rx="14" fill="#a78bfa" opacity="0.15" />
+    <text x="230" y="5" fill="#a78bfa">Radix UI</text>
+  </g>
+
+  <!-- URL -->
+  <text x="640" y="480" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#64748b">
+    tools.zuckerig.ru
+  </text>
+
+  <!-- Bottom line -->
+  <text x="640" y="520" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#475569">
+    by ZuckerigProd
+  </text>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="1278" height="638" rx="0" fill="none" stroke="#a78bfa" stroke-opacity="0.1" stroke-width="2" />
+</svg>

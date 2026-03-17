@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
+
+@theme {
+  --color-background: oklch(0.14 0.02 285);
+  --color-foreground: oklch(0.95 0.01 280);
+  --color-card: oklch(0.18 0.03 285 / 0.6);
+  --color-card-foreground: oklch(0.93 0.01 280);
+  --color-popover: oklch(0.18 0.03 285 / 0.9);
+  --color-popover-foreground: oklch(0.93 0.01 280);
+  --color-primary: oklch(0.65 0.25 300);
+  --color-primary-foreground: oklch(0.98 0.01 280);
+  --color-secondary: oklch(0.22 0.04 285);
+  --color-secondary-foreground: oklch(0.90 0.01 280);
+  --color-muted: oklch(0.20 0.03 285);
+  --color-muted-foreground: oklch(0.65 0.03 280);
+  --color-accent: oklch(0.70 0.20 340);
+  --color-accent-foreground: oklch(0.98 0.01 340);
+  --color-destructive: oklch(0.55 0.20 25);
+  --color-destructive-foreground: oklch(0.98 0.01 25);
+  --color-border: oklch(0.30 0.05 285 / 0.5);
+  --color-input: oklch(0.25 0.04 285 / 0.7);
+  --color-ring: oklch(0.65 0.25 300 / 0.5);
+
+  --color-neon-pink: oklch(0.70 0.25 340);
+  --color-neon-purple: oklch(0.55 0.30 300);
+  --color-neon-blue: oklch(0.60 0.20 260);
+  --color-sakura: oklch(0.78 0.12 350);
+  --color-lavender: oklch(0.75 0.10 290);
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+  --animate-fade-in-up: fade-in-up 0.5s ease-out both;
+}
+
+/* Light theme — :root.light beats :root from @theme inline */
+:root.light {
+  --color-background: oklch(0.97 0.015 290);
+  --color-foreground: oklch(0.05 0.03 285);
+  --color-card: oklch(1.0 0.02 295);
+  --color-card-foreground: oklch(0.05 0.03 285);
+  --color-popover: oklch(0.99 0.02 295);
+  --color-popover-foreground: oklch(0.05 0.03 285);
+  --color-primary: oklch(0.50 0.27 300);
+  --color-primary-foreground: oklch(0.98 0.01 280);
+  --color-secondary: oklch(0.93 0.05 295);
+  --color-secondary-foreground: oklch(0.10 0.04 290);
+  --color-muted: oklch(0.93 0.04 295);
+  --color-muted-foreground: oklch(0.30 0.03 285);
+  --color-accent: oklch(0.55 0.22 340);
+  --color-accent-foreground: oklch(0.98 0.01 340);
+  --color-destructive: oklch(0.55 0.22 25);
+  --color-destructive-foreground: oklch(0.98 0.01 25);
+  --color-border: oklch(0.85 0.06 295);
+  --color-input: oklch(0.92 0.04 295);
+  --color-ring: oklch(0.50 0.27 300 / 0.4);
+
+  --color-neon-pink: oklch(0.55 0.24 340);
+  --color-neon-purple: oklch(0.45 0.27 300);
+  --color-neon-blue: oklch(0.45 0.20 260);
+  --color-sakura: oklch(0.68 0.12 350);
+  --color-lavender: oklch(0.62 0.10 290);
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
