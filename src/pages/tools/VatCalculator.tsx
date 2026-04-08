@@ -28,7 +28,7 @@ export default function VatCalculator() {
 
   const [amount, setAmount] = useState("")
   const [type, setType] = useState<"add" | "extract">("add")
-  const [rate, setRate] = useState("20")
+  const [rate, setRate] = useState("22")
 
   const sum = parseNumber(amount)
   const r = parseFloat(rate) / 100
