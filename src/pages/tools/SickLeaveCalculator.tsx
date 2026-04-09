@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import DateInput from "@/components/calculator/DateInput"
 import MoneyInput from "@/components/calculator/MoneyInput"
@@ -32,6 +32,8 @@ export default function SickLeaveCalculator() {
   useSEO({
     title: "Калькулятор больничного листа",
     description: "Рассчитайте пособие по временной нетрудоспособности. Учёт стажа, МРОТ, оплаты за счёт работодателя и СФР.",
+    keywords: "калькулятор больничного, расчёт больничного листа, пособие по нетрудоспособности, оплата больничного, больничный лист 2025",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор больничного листа", description: "Расчёт пособия по временной нетрудоспособности с учётом стажа и МРОТ", url: "https://zuctools.ru/tools/sick-leave-calculator" }),
   })
 
   const [startDate, setStartDate] = useState("")

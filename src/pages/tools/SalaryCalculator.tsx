@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -25,6 +25,8 @@ export default function SalaryCalculator() {
   useSEO({
     title: "Калькулятор зарплаты онлайн",
     description: "Расчёт зарплаты: от начисленной к «на руки» и обратно, с НДФЛ, вычетами на детей и страховыми взносами.",
+    keywords: "калькулятор зарплаты, расчёт зарплаты онлайн, зарплата на руки, НДФЛ с зарплаты, вычеты на детей, страховые взносы",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор зарплаты онлайн", description: "Расчёт зарплаты от начисленной к «на руки» и обратно с НДФЛ и взносами", url: "https://zuctools.ru/tools/salary-calculator" }),
   })
 
   const [tab, setTab] = useState("gross-to-net")

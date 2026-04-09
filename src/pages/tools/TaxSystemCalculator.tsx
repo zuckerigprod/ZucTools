@@ -4,7 +4,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import InfoSection from "@/components/calculator/InfoSection"
@@ -29,6 +29,8 @@ export default function TaxSystemCalculator() {
   useSEO({
     title: "Выбор системы налогообложения",
     description: "Сравните ОСНО, УСН «Доходы», УСН «Д-Р», Патент и НПД. Узнайте, какая система налогообложения выгоднее для вашего бизнеса.",
+    keywords: "выбор системы налогообложения, сравнение налоговых режимов, ОСНО или УСН, патент или УСН, НПД, какой налог выбрать ИП",
+    jsonLd: buildToolJsonLd({ name: "Выбор системы налогообложения", description: "Сравнение ОСНО, УСН, Патент и НПД — какой режим выгоднее", url: "https://zuctools.ru/tools/tax-system-calculator" }),
   })
 
   const [entity, setEntity] = useState<EntityType>("ip")

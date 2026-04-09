@@ -4,7 +4,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import DateInput from "@/components/calculator/DateInput"
 import MoneyInput from "@/components/calculator/MoneyInput"
@@ -27,6 +27,8 @@ export default function PenaltyCalculator() {
   useSEO({
     title: "Калькулятор пеней по налогам",
     description: "Рассчитайте пени за просрочку уплаты налогов и взносов. Учёт ключевой ставки ЦБ, тип плательщика (ИП/организация).",
+    keywords: "калькулятор пеней, пени по налогам, расчёт пеней, пени за просрочку, ключевая ставка ЦБ, пени ФНС",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор пеней по налогам", description: "Расчёт пеней за просрочку уплаты налогов и взносов", url: "https://zuctools.ru/tools/penalty-calculator" }),
   })
 
   const [payerType, setPayerType] = useState<PayerType>("ip")

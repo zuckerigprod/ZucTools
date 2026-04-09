@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -36,6 +36,8 @@ export default function EmployeeCostCalculator() {
   useSEO({
     title: "Стоимость сотрудника — калькулятор для работодателя",
     description: "Рассчитайте полную стоимость сотрудника: оклад, НДФЛ, страховые взносы, районный коэффициент.",
+    keywords: "стоимость сотрудника, расходы на сотрудника, калькулятор работодателя, страховые взносы работодатель, ФОТ калькулятор",
+    jsonLd: buildToolJsonLd({ name: "Стоимость сотрудника для работодателя", description: "Расчёт полной стоимости сотрудника с учётом всех взносов", url: "https://zuctools.ru/tools/employee-cost-calculator" }),
   })
 
   const [salary, setSalary] = useState("")

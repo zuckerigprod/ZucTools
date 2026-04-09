@@ -4,7 +4,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import DateInput from "@/components/calculator/DateInput"
 import MoneyInput from "@/components/calculator/MoneyInput"
@@ -30,6 +30,8 @@ export default function DismissalCompensationCalculator() {
   useSEO({
     title: "Компенсация отпуска при увольнении",
     description: "Рассчитайте компенсацию за неиспользованный отпуск при увольнении с учётом стажа, НДФЛ и правила 5,5 месяцев.",
+    keywords: "компенсация при увольнении, компенсация за неиспользованный отпуск, расчёт при увольнении, увольнение компенсация",
+    jsonLd: buildToolJsonLd({ name: "Компенсация при увольнении", description: "Расчёт компенсации за неиспользованный отпуск при увольнении", url: "https://zuctools.ru/tools/dismissal-compensation-calculator" }),
   })
 
   const [reason, setReason] = useState<DismissalReason>("own")

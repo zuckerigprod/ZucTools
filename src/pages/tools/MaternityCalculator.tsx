@@ -4,7 +4,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import DateInput from "@/components/calculator/DateInput"
 import MoneyInput from "@/components/calculator/MoneyInput"
@@ -19,6 +19,8 @@ export default function MaternityCalculator() {
   useSEO({
     title: "Калькулятор декретных онлайн",
     description: "Рассчитайте пособие по беременности и родам. Учёт МРОТ, предельных баз, дней-исключений. Данные 2024–2026.",
+    keywords: "калькулятор декретных, пособие по беременности и родам, декретные выплаты, расчёт декретных 2025, больничный по беременности",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор декретных", description: "Расчёт пособия по беременности и родам с учётом МРОТ и предельных баз", url: "https://zuctools.ru/tools/maternity-calculator" }),
   })
 
   const [startDate, setStartDate] = useState("")

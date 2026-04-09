@@ -3,7 +3,7 @@ import { Shield } from "lucide-react"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import DateInput from "@/components/calculator/DateInput"
 import MoneyInput from "@/components/calculator/MoneyInput"
@@ -27,6 +27,8 @@ export default function IpContributionsCalculator() {
   useSEO({
     title: "Страховые взносы ИП — калькулятор",
     description: "Рассчитайте фиксированные страховые взносы ИП за себя и 1% с доходов свыше 300 000 ₽. Актуальные данные 2020–2026.",
+    keywords: "страховые взносы ИП, фиксированные взносы ИП, взносы ИП 2025, взносы ИП 2026, 1 процент свыше 300000, ПФР ИП",
+    jsonLd: buildToolJsonLd({ name: "Страховые взносы ИП", description: "Расчёт фиксированных взносов ИП и 1% с доходов свыше 300 000 руб.", url: "https://zuctools.ru/tools/ip-contributions-calculator" }),
   })
 
   const [year, setYear] = useState("2026")

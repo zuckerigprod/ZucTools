@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -38,6 +38,8 @@ export default function UsnCalculator() {
   useSEO({
     title: "Калькулятор УСН онлайн",
     description: "Рассчитайте налог по упрощённой системе налогообложения (УСН). «Доходы» 6% и «Доходы минус расходы» 15%. Данные 2026.",
+    keywords: "калькулятор УСН, УСН доходы, УСН доходы минус расходы, упрощёнка калькулятор, налог УСН 2026, УСН 6 процентов",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор УСН", description: "Расчёт налога по упрощённой системе налогообложения", url: "https://zuctools.ru/tools/usn-calculator" }),
   })
 
   const [ownerType, setOwnerType] = useState<OwnerType>("ip")

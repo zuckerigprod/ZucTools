@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Calculator } from "lucide-react"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import ResultRow from "@/components/calculator/ResultRow"
 
@@ -11,6 +11,8 @@ export default function PercentCalculator() {
   useSEO({
     title: "Калькулятор процентов онлайн",
     description: "Бесплатный калькулятор процентов: вычисление процента от числа, прибавление и вычитание процентов. Быстро и точно.",
+    keywords: "калькулятор процентов, процент от числа, прибавить процент, вычесть процент, расчёт процентов онлайн",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор процентов онлайн", description: "Вычисление процента от числа, прибавление и вычитание процентов", url: "https://zuctools.ru/tools/percent-calculator" }),
   })
   const [number, setNumber] = useState("")
   const [percent, setPercent] = useState("")

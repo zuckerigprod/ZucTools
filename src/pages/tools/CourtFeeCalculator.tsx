@@ -3,7 +3,7 @@ import { Gavel } from "lucide-react"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -16,6 +16,8 @@ export default function CourtFeeCalculator() {
   useSEO({
     title: "Калькулятор госпошлины в суд онлайн",
     description: "Расчёт госпошлины для судов общей юрисдикции и арбитражных судов по ст. 333.19 и 333.21 НК РФ.",
+    keywords: "калькулятор госпошлины, госпошлина в суд, расчёт госпошлины, арбитражный суд госпошлина, 333.19 НК РФ, судебная пошлина",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор госпошлины в суд", description: "Расчёт госпошлины для судов общей юрисдикции и арбитражных судов", url: "https://zuctools.ru/tools/court-fee-calculator" }),
   })
 
   const [amount, setAmount] = useState("")

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Button } from "@/components/ui/button"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -17,6 +17,8 @@ export default function LoanCalculator() {
   useSEO({
     title: "Калькулятор кредита онлайн",
     description: "Расчёт аннуитетных и дифференцированных платежей по кредиту с графиком амортизации.",
+    keywords: "калькулятор кредита, расчёт кредита онлайн, аннуитетный платёж, дифференцированный платёж, график платежей, ипотечный калькулятор",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор кредита онлайн", description: "Расчёт аннуитетных и дифференцированных платежей по кредиту с графиком", url: "https://zuctools.ru/tools/loan-calculator" }),
   })
 
   const [amount, setAmount] = useState("")

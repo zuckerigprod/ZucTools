@@ -3,7 +3,7 @@ import { Type } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import { Copy, Check } from "lucide-react"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import InfoSection from "@/components/calculator/InfoSection"
@@ -14,6 +14,8 @@ export default function NumberToWordsCalculator() {
   useSEO({
     title: "Сумма прописью онлайн",
     description: "Бесплатный онлайн-калькулятор: переведите число в текст прописью. Рубли и копейки. Для платёжных поручений и документов.",
+    keywords: "сумма прописью, число прописью, рубли прописью, сумма прописью онлайн, платёжное поручение",
+    jsonLd: buildToolJsonLd({ name: "Сумма прописью онлайн", description: "Перевод числа в текст прописью для платёжных поручений и документов", url: "https://zuctools.ru/tools/number-to-words" }),
   })
 
   const [amount, setAmount] = useState("")

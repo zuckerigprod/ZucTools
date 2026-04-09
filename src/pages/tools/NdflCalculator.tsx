@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { TrendingUp } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -57,6 +57,8 @@ export default function NdflCalculator() {
   useSEO({
     title: "Калькулятор НДФЛ онлайн",
     description: "Расчёт НДФЛ по прогрессивной шкале 2025–2026 с визуализацией налоговых ступеней.",
+    keywords: "калькулятор НДФЛ, расчёт НДФЛ, подоходный налог, прогрессивная шкала НДФЛ, НДФЛ 2025, НДФЛ 13 процентов, налог на доходы",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор НДФЛ", description: "Расчёт НДФЛ по прогрессивной шкале с визуализацией ступеней", url: "https://zuctools.ru/tools/ndfl-calculator" }),
   })
 
   const [amount, setAmount] = useState("")

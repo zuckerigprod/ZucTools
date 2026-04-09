@@ -3,7 +3,7 @@ import { Receipt } from "lucide-react"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -24,10 +24,12 @@ export default function VatCalculator() {
   useSEO({
     title: "Калькулятор НДС онлайн",
     description: "Бесплатный онлайн-калькулятор НДС: выделение и начисление НДС по ставкам 5%, 7%, 10%, 18%, 20%, 22%. Быстрый расчёт с суммой прописью.",
+    keywords: "калькулятор НДС, выделить НДС, начислить НДС, НДС 20%, НДС 22%, расчёт НДС онлайн, НДС калькулятор бесплатно",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор НДС онлайн", description: "Выделение и начисление НДС по ставкам 5%, 7%, 10%, 18%, 20%, 22%", url: "https://zuctools.ru/tools/vat-calculator" }),
   })
 
   const [amount, setAmount] = useState("")
-  const [type, setType] = useState<"add" | "extract">("add")
+  const [type, setType] = useState<"add" | "extract">("extract")
   const [rate, setRate] = useState("22")
 
   const sum = parseNumber(amount)

@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import MoneyInput from "@/components/calculator/MoneyInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -29,6 +29,8 @@ export default function DepositCalculator() {
   useSEO({
     title: "Калькулятор вклада онлайн",
     description: "Расчёт доходности вклада с капитализацией процентов и ежемесячным пополнением.",
+    keywords: "калькулятор вклада, расчёт процентов по вкладу, капитализация процентов, доходность вклада, депозитный калькулятор",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор вклада онлайн", description: "Расчёт доходности вклада с капитализацией и пополнением", url: "https://zuctools.ru/tools/deposit-calculator" }),
   })
 
   const [amount, setAmount] = useState("")

@@ -3,7 +3,7 @@ import { Palmtree } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import DateInput from "@/components/calculator/DateInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -56,6 +56,8 @@ export default function VacationPayCalculator() {
   useSEO({
     title: "Калькулятор отпускных онлайн",
     description: "Рассчитайте отпускные с учётом среднего заработка, НДФЛ и производственного календаря. Формула с коэффициентом 29,3.",
+    keywords: "калькулятор отпускных, расчёт отпускных, отпускные 2025, средний заработок, коэффициент 29.3, НДФЛ с отпускных",
+    jsonLd: buildToolJsonLd({ name: "Калькулятор отпускных", description: "Расчёт отпускных с учётом среднего заработка и НДФЛ", url: "https://zuctools.ru/tools/vacation-pay-calculator" }),
   })
 
   const [startDate, setStartDate] = useState("")
