@@ -3,7 +3,7 @@ import { ShieldCheck, CheckCircle2, XCircle } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import InfoSection from "@/components/calculator/InfoSection"
 import { validateINN, validateOGRN, validateSNILS, validateKPP, validateAccount } from "@/lib/utils/inn-validator"
@@ -198,6 +198,8 @@ export default function InnValidator() {
   useSEO({
     title: "Проверка ИНН, ОГРН, СНИЛС онлайн",
     description: "Бесплатная проверка ИНН, ОГРН, СНИЛС, КПП и расчётных счетов по контрольной сумме.",
+    keywords: "проверка ИНН, проверить ИНН онлайн, валидация ОГРН, проверка СНИЛС, контрольная сумма ИНН, проверка КПП",
+    jsonLd: buildToolJsonLd({ name: "Проверка ИНН, ОГРН, СНИЛС", description: "Валидация ИНН, ОГРН, СНИЛС и КПП по контрольной сумме", url: "https://zuctools.ru/tools/inn-validator" }),
   })
 
   return (

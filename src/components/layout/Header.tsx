@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate, useLocation } from "react-router-dom"
-import { Wrench, Sun, Moon, Menu } from "lucide-react"
+import { Wrench, Sun, Moon, Menu, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -115,6 +115,21 @@ export default function Header() {
 
         <div className="flex items-center gap-1">
           <DesktopNav />
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="text-muted-foreground hover:text-foreground"
+          >
+            <a
+              href="https://github.com/zuckerigprod/ZucTools"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <Github className="h-5 w-5" />
+            </a>
+          </Button>
           <ThemeToggle />
           <MobileNav />
         </div>

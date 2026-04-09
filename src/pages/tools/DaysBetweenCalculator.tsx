@@ -3,7 +3,7 @@ import { CalendarDays } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import DateInput from "@/components/calculator/DateInput"
 import ResultRow from "@/components/calculator/ResultRow"
@@ -16,6 +16,8 @@ export default function DaysBetweenCalculator() {
   useSEO({
     title: "Дни между датами — калькулятор",
     description: "Рассчитайте количество календарных и рабочих дней между двумя датами с учётом производственного календаря РФ.",
+    keywords: "дни между датами, рабочие дни между датами, календарные дни, количество дней, производственный календарь",
+    jsonLd: buildToolJsonLd({ name: "Дни между датами", description: "Расчёт календарных и рабочих дней между двумя датами", url: "https://zuctools.ru/tools/days-between-calculator" }),
   })
 
   const [startDate, setStartDate] = useState("")

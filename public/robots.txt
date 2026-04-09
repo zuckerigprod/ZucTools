@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+
+User-agent: Yandex
+Allow: /
+Disallow: /assets/
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
 
 Sitemap: https://zuctools.ru/sitemap.xml
+Host: https://zuctools.ru

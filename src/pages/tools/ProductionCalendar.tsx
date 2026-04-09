@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-import { useSEO } from "@/lib/use-seo"
+import { useSEO, buildToolJsonLd } from "@/lib/use-seo"
 import CalculatorLayout from "@/components/calculator/CalculatorLayout"
 import ResultRow from "@/components/calculator/ResultRow"
 import {
@@ -92,6 +92,8 @@ export default function ProductionCalendar() {
   useSEO({
     title: "Производственный календарь 2024–2026",
     description: "Производственный календарь РФ с праздниками, выходными и сокращёнными днями на 2024, 2025 и 2026 годы.",
+    keywords: "производственный календарь, производственный календарь 2025, производственный календарь 2026, рабочие дни, праздничные дни РФ",
+    jsonLd: buildToolJsonLd({ name: "Производственный календарь 2024–2026", description: "Производственный календарь РФ с праздниками и рабочими днями", url: "https://zuctools.ru/tools/production-calendar" }),
   })
 
   const [year, setYear] = useState("2026")

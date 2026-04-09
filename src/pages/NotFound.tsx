@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react"
 import { useSEO } from "@/lib/use-seo"
 
 export default function NotFound() {
-  useSEO({ title: "Страница не найдена" })
+  useSEO({ title: "Страница не найдена", noindex: true })
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] animate-fade-in-up text-center">
       <h1 className="text-8xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
